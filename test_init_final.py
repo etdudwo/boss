@@ -4038,7 +4038,13 @@ class IlsangDistributionBot(commands.AutoShardedBot):
 			if self.get_channel(basicSetting[7]).id == msg.channel.id:
 				channel = basicSetting[7]
 				message = msg
-
+				# TEST
+				embed = discord.Embed(
+								description= '```message.content: ' + message.content + '.```',
+								color=0xff0000
+								)
+						await self.get_channel(channel).send(embed=embed, tts=False)
+				
 				for command_str in ["컷", "멍", "예상", "삭제", "메모", "카톡켬", "카톡끔"]:
 					if command_str in message.content:
 						tmp_msg : str = ""
@@ -4047,6 +4053,12 @@ class IlsangDistributionBot(commands.AutoShardedBot):
 								message.content = message.content.replace(message.content[:message.content.find(command_str)], key)
 
 				hello = message.content
+				# TEST
+				embed = discord.Embed(
+								description= '```hello: ' + hello + '.```',
+								color=0xff0000
+								)
+						await self.get_channel(channel).send(embed=embed, tts=False)
 
 				for i in range(bossNum):
 					################ 보스 컷처리 ################ 
@@ -4054,6 +4066,12 @@ class IlsangDistributionBot(commands.AutoShardedBot):
 						if hello.find('  ') != -1 :
 							bossData[i][6] = hello[hello.find('  ')+2:]
 							hello = hello[:hello.find('  ')]
+							# TEST
+							embed = discord.Embed(
+								description= '```hello: ' + hello + 'bossData[i][6]' + bossData[i][6] + '.```',
+								color=0xff0000
+								)
+							await self.get_channel(channel).send(embed=embed, tts=False)
 						else:
 							bossData[i][6] = ''
 
