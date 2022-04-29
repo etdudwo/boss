@@ -4124,8 +4124,9 @@ class IlsangDistributionBot(commands.AutoShardedBot):
 							bossFlag[i] = True
 							bossFlag0[i] = True
 
+							#TEST
 						embed = discord.Embed(
-								description= '```다음 ' + bossData[i][0] + ' ' + bossTimeString[i] + '입니다.```',
+								description= '```다음 ' + bossData[i][0] + ' ' + bossTimeString[i] + '입니다.ㅁㄴㅇㄹ```',
 								color=0xff0000
 								)
 						await self.get_channel(channel).send(embed=embed, tts=False)
