@@ -4050,7 +4050,7 @@ class IlsangDistributionBot(commands.AutoShardedBot):
 
 				for i in range(bossNum):
 					################ 보스 컷처리 ################ 
-					if message.content.endswith(bossData[i][0] +'컷') or message.content.endswith(convertToInitialLetters(bossData[i][0] +'컷')) or message.content.endswith(bossData[i][0] +' 컷') or message.content.endswith(convertToInitialLetters(bossData[i][0] +' 컷')):
+					if message.content.startswith(bossData[i][0] +'컷') or message.content.startswith(convertToInitialLetters(bossData[i][0] +'컷')) or message.content.startswith(bossData[i][0] +' 컷') or message.content.startswith(convertToInitialLetters(bossData[i][0] +' 컷')):
 						if hello.find('  ') != -1 :
 							bossData[i][6] = hello[hello.find('  ')+2:]
 							hello = hello[:hello.find('  ')]
